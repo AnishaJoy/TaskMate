@@ -65,7 +65,7 @@ const EditTodo = ({ todos, setTodos }) => {
 
                 {/* Save and Back buttons */}
                 <div className="edit-btn-group">
-                    <button className="edit-btn primary" onClick={handleEdit}>Save</button>
+                    <button className="edit-btn primary" onClick={handleSave}>Save</button>
                     <Link className="edit-btn secondary" to="/"> Back</Link>
                 </div>
             </div>
