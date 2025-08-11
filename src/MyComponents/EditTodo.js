@@ -23,7 +23,7 @@ const EditTodo = () => {
         const updatedTodos = existingTodos.map(t =>
             t.sno === editedTodo.sno ? editedTodo : t // Replace the matching todo
         );
-
+        setTodos(updatedTodos); // updates state in App.js
         // Save updated list to local storage
         localStorage.setItem("todos", JSON.stringify(updatedTodos));
         navigate("/"); // Go back to the home page
