@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Key Beginner Notes:
+useState → lets you store and update variables that make React re-render when changed.
+
+useEffect → runs side effects (like saving to localStorage) when data changes.
+
+Routes & Route → decide which component/page to show for each URL.
+
+useNavigate → lets you change pages using code instead of a link.
+
+localStorage → saves data in the browser so it stays even after refresh.

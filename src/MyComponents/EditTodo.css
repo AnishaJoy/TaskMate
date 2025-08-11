@@ -1,0 +1,92 @@
+.edit-todo-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.edit-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.edit-card {
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.edit-form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.edit-form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.edit-input, 
+.edit-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.2s ease-in-out;
+}
+
+.edit-input:focus,
+.edit-textarea:focus {
+  border-color: #52ab98;
+  box-shadow: 0 0 5px rgba(82, 171, 152, 0.5);
+}
+
+.edit-btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.edit-btn {
+  flex: 1;
+  padding: 10px;
+  margin: 0 5px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+}
+
+.edit-btn.primary {
+  background: #52ab98;
+  color: white;
+}
+
+.edit-btn.primary:hover {
+  background: #3e8f7e;
+}
+
+.edit-btn.secondary {
+  background: #dc3545;
+  color: white;
+}
+
+.edit-btn.secondary:hover {
+  background: #b42a37;
+}
+
+.no-todo {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  color: #777;
+}
