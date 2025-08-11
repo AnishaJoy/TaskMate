@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import './EditTodo.css'; // Importing styles for this component
 
-const EditTodo = () => {
+const EditTodo = ({ todos, setTodos }) => {
+
     // useLocation lets us access data passed via navigation (in this case, the todo to edit)
     const { state } = useLocation();
     const navigate = useNavigate();
@@ -17,17 +18,15 @@ const EditTodo = () => {
     const handleDescChange = (e) => setDesc(e.target.value);
 
     // Function to save the edited todo
-    const handleEdit = () => {
-        const editedTodo = { ...todo, title, desc }; // Copy existing todo & update fields
-        const existingTodos = JSON.parse(localStorage.getItem("todos")) || [];
-        const updatedTodos = existingTodos.map(t =>
-            t.sno === editedTodo.sno ? editedTodo : t // Replace the matching todo
+    const handleSave = () => {
+        const editedTodo = { ...todo, title, desc }; // make updated todo object
+        const updatedTodos = todos.map(t =>
+            t.sno === editedTodo.sno ? editedTodo : t
         );
-        setTodos(updatedTodos); // updates state in App.js
-        // Save updated list to local storage
-        localStorage.setItem("todos", JSON.stringify(updatedTodos));
-        navigate("/"); // Go back to the home page
+        setTodos(updatedTodos); // update App.js state
+        navigate("/"); // go back to home
     };
+
 
     // If no todo is provided, show a message
     if (!todo) {

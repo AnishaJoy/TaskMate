@@ -78,8 +78,7 @@ function App() {
         {/* About page */}
         <Route path="/about" element={<About />} />
 
-        {/* Edit todo page */}
-        <Route path="/editTodo" element={<EditTodo />} />
+        <Route path="/editTodo" element={<EditTodo todos={todos} setTodos={setTodos} />} />
       </Routes>
 
       {/* Footer at the bottom */}
